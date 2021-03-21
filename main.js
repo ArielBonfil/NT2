@@ -1,7 +1,7 @@
 const app = new Vue({
   el: "#app",
   data: {
-    titulo: "Hola mundo con Vue",
+    titulo: "Verduleria con Vue",
     frutas: [
       { nombre: "manzana", cantidad: 4, precio: 10 },
       { nombre: "pera", cantidad: 0, precio: 50 },
@@ -9,6 +9,8 @@ const app = new Vue({
     ],
     nuevaFruta: "",
     cantFrutasTotal: 0,
+    fondo: "bg-warning",
+    color: false,
   },
   methods: {
     agregarFruta() {
