@@ -11,6 +11,7 @@ const app = new Vue({
     cantFrutasTotal: 0,
     fondo: "bg-warning",
     color: false,
+    contador: 0,
   },
   methods: {
     agregarFruta() {
@@ -31,6 +32,16 @@ const app = new Vue({
         this.cantFrutasTotal += fruta.cantidad;
       }
       return this.cantFrutasTotal;
+    },
+    invertido() {
+      return this.titulo.split("").reverse().join("");
+    },
+    colora() {
+      return {
+        "bg-success": this.contador <= 10,
+        "bg-warning": this.contador > 10 && this.contador < 20,
+        "bg-danger": this.contador >= 20,
+      };
     },
   },
 });
